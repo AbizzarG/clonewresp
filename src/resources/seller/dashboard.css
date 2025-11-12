@@ -1,0 +1,274 @@
+:root {
+    --color-green-first: #40B54B;
+    --color-green-hover: #369942;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-third: #5a5a5a;
+    --bg-light: #f9f9f9;
+    --border: #f0f2f4;
+    --border-input: #ddd;
+    --error: #e74c3c;
+    --error-bg: #fee;
+    --success: #40B54B;
+    --success-bg: #d1e7dd;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    margin-top: 24px;
+    border-bottom: 1px solid var(--tkpd-border);
+    padding-bottom: 8px;
+}
+
+h4 {
+    font-size: 1rem;
+    color: var(--tkpd-text-secondary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+a {
+    color: var(--color-green-first);
+    text-decoration: none;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Reusable Card Component --- */
+#displayStoreInfo,
+#editStoreForm,
+.quick-stats,
+.quick-actions {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Error / Success Messages --- */
+.error-msg,
+.success-msg {
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.error-msg {
+    background-color: var(--error-bg);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+.success-msg {
+    background-color: var(--success-bg);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+/* --- Store Info Display --- */
+#displayStoreInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+}
+
+.store-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+}
+
+#displayStoreInfo h2 {
+    margin-bottom: 0;
+}
+
+#displayStoreInfo p {
+    margin-bottom: 0;
+}
+
+#displayStoreInfo strong {
+    color: var(--text-secondary);
+}
+
+/* --- Edit Store Form --- */
+#editStoreForm {
+    display: none; /* Hidden by default */
+    border: 2px dashed var(--color-green-first);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-input);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: var(--color-green-first);
+    box-shadow: 0 0 0 3px rgba(64, 181, 75, 0.1);
+    outline: none;
+}
+
+#logo-preview {
+    display: none; /* Hidden until a file is selected */
+    max-width: 150px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: 1px dashed var(--border-input);
+    padding: 4px;
+}
+
+/* --- Quill Editor Styling --- */
+#editor {
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.ql-toolbar.ql-snow {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-color: var(--border-input);
+}
+
+.ql-container.ql-snow {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: var(--border-input);
+}
+
+/* --- Buttons --- */
+.action-button {
+    display: inline-block;
+    background-color: var(--color-green-first);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: var(--color-green-hover);
+}
+
+/* Secondary / Cancel Button */
+#cancelEditBtn {
+    background-color: #fff !important;
+    color: var(--text-secondary) !important;
+    border: 1px solid var(--border-input);
+}
+
+#cancelEditBtn:hover {
+    background-color: var(--bg-light) !important;
+}
+
+#editStoreBtn {
+    margin-left: auto;
+}
+
+/* --- Quick Stats Section --- */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.card h4 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stats-cards .card:nth-child(2) p {
+    color: var(--error);
+}
+
+.stats-cards .card:nth-child(3) p {
+    color: #f5a623;
+}
+
+/* --- Quick Actions Section --- */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}

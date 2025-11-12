@@ -1,0 +1,209 @@
+@import url('../public.css');
+@import url('./product_discovery.css');
+
+.store-header {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.store-header-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.store-logo:hover {
+    border-color: #40B54B;
+}
+
+.store-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.store-info h1 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.store-info p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.store-stats {
+    margin-top: 1rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.pd-filter-icon-btn {
+    border-radius: 10px;
+}
+
+.pd-filter-icon-btn i {
+    transition: transform 0.3s ease;
+}
+
+.pd-filter-dropdown.open .pd-filter-icon-btn i {
+    transform: rotate(180deg);
+}
+
+.pd-filter-dropdown-menu {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+
+.pd-filter-dropdown-item input[type="number"] {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.pd-filter-dropdown-item input[type="number"]:hover {
+    border-color: #40B54B;
+}
+
+.pd-filter-dropdown-item input[type="number"]:focus {
+    border-color: #40B54B;
+    outline: none;
+}
+
+.pd-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.pd-filter-dropdown-item select {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    appearance: none;
+    padding-right: 36px;
+}
+
+.pd-filter-dropdown-item select:hover {
+    border-color: #40B54B;
+}
+
+.pd-filter-dropdown-item select:focus {
+    border-color: #40B54B;
+    outline: none;
+}
+
+.pd-select-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #333;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.pd-select-wrapper.active .pd-select-icon {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.pd-card-image .pd-stock-out-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pd-empty-icon {
+    width: 80px;
+    height: 80px;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.pd-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pd-pagination-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.pd-pagination-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pd-pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pd-pagination-btn:hover {
+    background-color: #f4f4f4;
+    border-color: #40B54B;
+}
+
+.pd-pagination-active {
+    background-color: #40B54B !important;
+    color: white !important;
+    border-color: #40B54B !important;
+}
+
+.pd-per-page-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.pd-per-page-select:hover {
+    border-color: #40B54B;
+}
+
+.pd-per-page-select:focus {
+    outline: none;
+    border-color: #40B54B;
+}
+

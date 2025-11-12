@@ -1,0 +1,48 @@
+/*
+    Global styles
+    return @classes
+*/
+
+:root {
+    --color-secondary: #AAB4C8;
+    --color-third: #5a5a5a;
+    --color-green-first: #40B54B;
+    --color-green-secondary: #43a34b;
+    --color-error-red: rgb(199, 70, 70);
+    --font-weight-bold: 700;
+    --font-weight-semibold: 500;
+    --font-weight-normal: 300;
+    --font-weight-light: 200;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Utility Classes */
+body.modal-open {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.badge-hidden {
+    display: none !important;
+}
+
+.badge-visible {
+    display: flex !important;
+}
